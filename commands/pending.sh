@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#doc: Add a REQUESTED_CHANGE type review to mark issue non-mergeable: `/pending <reason>`
 MESSAGE="Marking this issue as un-mergeable as requested.
 
 Please use \`/ready\` comment when it's resolved.

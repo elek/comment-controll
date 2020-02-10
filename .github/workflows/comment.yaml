@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: ./process-comment.sh
+      - run: ./process-comment.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

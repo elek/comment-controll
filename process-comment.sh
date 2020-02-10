@@ -9,7 +9,7 @@ if [ "$LINES" == "0" ]; then
          RESPONSE=$("./commands/$COMMAND.sh")
          COMMENTS_URL=$(jq -r .issue.comments_url $GITHUB_EVENT_PATH)
          set +x #do not display the GITHUB_TOKEN
-         curl \
+         curl -s \
             --data "$(jq --arg body "$RESPONSE" -n '{body: $body}')" \
             --header "authorization: Bearer $GITHUB_TOKEN" \
             --header 'content-type: application/json' \
